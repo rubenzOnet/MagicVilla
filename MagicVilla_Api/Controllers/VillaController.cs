@@ -7,5 +7,6 @@ namespace MagicVilla_Api.Controllers
     [ApiController]
     public class VillaController : ControllerBase
     {
+
     }
 }
