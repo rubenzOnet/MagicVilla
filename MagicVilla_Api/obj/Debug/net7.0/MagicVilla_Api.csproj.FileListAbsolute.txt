@@ -31,3 +31,7 @@ C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\obj\Debug\net7.0\refint
 C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\obj\Debug\net7.0\MagicVilla_Api.pdb
 C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\obj\Debug\net7.0\MagicVilla_Api.genruntimeconfig.cache
 C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\obj\Debug\net7.0\ref\MagicVilla_Api.dll
+C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\bin\Debug\net7.0\Magic_Villa_Core.dll
+C:\Users\Rubenzmx\source\repos\MagicVilla\MagicVilla_Api\bin\Debug\net7.0\Magic_Villa_Core.pdb
