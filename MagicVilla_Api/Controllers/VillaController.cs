@@ -5,6 +5,7 @@ using MagicVilla_Api.Models.DTO;
 using MagicVilla_Api.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
 using System.Net;
@@ -140,6 +141,25 @@ namespace MagicVilla_Api.Controllers
             villa.MetrosCuadrados = villaDTO.MetrosCuadrados;
 
             return villaDTO.ToResponse(true, HttpStatusCode.OK, "Datos de villa actualizados.");
+        }
+
+
+        [HttpPatch("id:int")]
+        public Response UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDTO)
+        {
+
+            if (patchDTO == null || id == 0)
+                return patchDTO.ToResponse(false, HttpStatusCode.BadRequest, "Datos erroneos.");
+
+            
+            var villa = VillaStore.villaList.FirstOrDefault(w => w.Id == id);
+
+            patchDTO.ApplyTo(villa, ModelState);
+
+            if(!ModelState.IsValid)
+                return patchDTO.ToResponse(false, HttpStatusCode.BadRequest, "Datos erroneos.");
+
+            return patchDTO.ToResponse(true, HttpStatusCode.OK, "Datos de villa actualizados.");
         }
 
 
