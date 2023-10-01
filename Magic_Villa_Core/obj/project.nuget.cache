@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cf40UaxrVPfA3YtXhpNF/hBKlpvLVKuH8WNQTpQoBp+DZzTIx1nWyWMIMeuazxF8nZ4uTZSkgMWkLmnhMtEhwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rubenzmx\\source\\repos\\MagicVilla\\Magic_Villa_Core\\Magic_Villa_Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rubenzmx\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Rubenzmx\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
