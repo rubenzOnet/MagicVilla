@@ -17,12 +17,20 @@ namespace MagicVilla_Api.Controllers
     public class VillaController : ControllerBase
     {
 
+        private readonly ILogger<VillaController> _logger;
+
+        public VillaController(ILogger<VillaController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public Response GetVillas()
         {
             var resultado = VillaStore.villaList;
-           
+
+            _logger.LogInformation("Se estan consultando todas las villas.");
             return resultado.ToResponse(true, HttpStatusCode.OK, "");
         }
 
@@ -39,6 +47,7 @@ namespace MagicVilla_Api.Controllers
             {
                 if (id == 0)
                 {
+                    _logger.LogError("Error al traer la villa");
                     return villaDTOResponse.ToResponse(false, HttpStatusCode.BadRequest, "Algo salio mal.");
                 }
 
@@ -149,7 +158,10 @@ namespace MagicVilla_Api.Controllers
         {
 
             if (patchDTO == null || id == 0)
+            {
+                
                 return patchDTO.ToResponse(false, HttpStatusCode.BadRequest, "Datos erroneos.");
+            }
 
             
             var villa = VillaStore.villaList.FirstOrDefault(w => w.Id == id);
